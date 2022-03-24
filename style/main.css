@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--mainBG: hsl(217, 54%, 11%);
+	--vcardBG: hsl(216, 50%, 16%);
+	--line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+	--softblue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+}
+
+body {
+	background: var(--mainBG);
+	font-family: 'Outfit', sans-serif;
+	font-size: 18px;
+	color: var(--white);
+}
+
+img {
+	max-width: 100%;
+}
+
+.card-component {
+	background-color: var(--vcardBG);
+	max-width: 19em;
+	height: 32em;
+	margin: 4em auto;
+	padding: 1em;
+	border-radius: 0.8em;
+}
+
+.card-component__image {
+  position: relative;
+  max-width: 100%;
+  height: 17em;
+}
+
+.card-component__image::before {
+  display: none;
+  inset: 0 0 0 0;
+  position: absolute;
+  border-radius: 0.5em;
+  align-items: center;
+  justify-content: center;
+  content: url('/images/icon-view.svg');
+  cursor: pointer;
+}
+
+.card-component__image img {
+	border-radius: 0.5em;
+}
+
+.card-component__image:hover::before {
+  display: flex;
+  background-color: var(--cyan);
+  height: auto;
+  opacity: .6;
+}
+
+.card-component__title {
+	font-size: 1.5rem;
+	margin: 0.8em 0;
+}
+
+.card-component__title:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.card-component__description {
+	font-weight: 300;
+	color: var(--softblue);
+}
+
+.card-component__info {
+	display: flex;
+	justify-content: space-between;
+	margin: 1em 0;
+	align-items: center;
+}
+
+.card-component__amount {
+	font-weight: 700;
+	color: var(--cyan);
+	display: flex;
+	align-items: center;
+}
+
+.card-component__amount img,
+.card-component__duration img {
+	margin-right: 0.5em;
+}
+
+.card-component__duration {
+	font-weight: 300;
+	color: var(--softblue);
+	display: flex;
+	align-items: center;
+}
+
+.divider {
+  border-bottom: 1px solid var(--line);
+}
+
+.card-component__profile img {
+	width: 35px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.card-component__profile {
+	display: flex;
+	align-items: center;
+  color: var(--softblue);
+  margin-top: 1em;
+}
+
+.card-component__author {
+  margin-left: 1em;
+}
+
+.card-component__profile span#name {
+	color: var(--white);
+}
+
+.card-component__profile span#name:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: var(--cyan);
+}

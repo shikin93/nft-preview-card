@@ -27,7 +27,6 @@ img {
 .card-component {
 	background-color: var(--vcardBG);
 	max-width: 19em;
-	height: 32em;
 	margin: 4em auto;
 	padding: 1em;
 	border-radius: 0.8em;
@@ -36,7 +35,7 @@ img {
 .card-component__image {
   position: relative;
   max-width: 100%;
-  height: 17em;
+  height: 20em;
 }
 
 .card-component__image::before {
@@ -52,6 +51,7 @@ img {
 
 .card-component__image img {
 	border-radius: 0.5em;
+  height: 20em;
 }
 
 .card-component__image:hover::before {
@@ -107,7 +107,7 @@ img {
 }
 
 .card-component__profile img {
-	width: 35px;
+	width: 2em;
   border-radius: 50%;
   border: 2px solid var(--white);
 }
@@ -139,4 +139,16 @@ img {
 
 .attribution a {
 	color: var(--cyan);
+}
+
+@media (min-width: 768px) {
+  .card-component {
+    max-width: 20em;
+  }
+}
+
+@media (min-width: 991px) {
+  .card-component {
+    max-width: 21em;
+  }
 }
